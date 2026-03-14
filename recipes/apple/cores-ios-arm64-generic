@@ -127,3 +127,4 @@ gw libretro-gw https://github.com/libretro/gw-libretro.git master YES GENERIC Ma
 81 libretro-81 https://github.com/libretro/81-libretro.git master YES GENERIC Makefile .
 fuse libretro-fuse https://github.com/libretro/fuse-libretro.git master YES GENERIC Makefile .
 test libretro-samples https://github.com/libretro/libretro-samples.git master YES GENERIC Makefile tests/test
+trident libretro-trident https://github.com/DanAlexMorton/3dsTrident.git main YES CMAKE Makefile build -DBUILD_LIBRETRO_CORE=ON -DUSE_LIBRETRO_AUDIO=ON -DENABLE_USER_BUILD=ON -DENABLE_VULKAN=OFF -DENABLE_LUAJIT=OFF -DENABLE_DISCORD_RPC=OFF -DENABLE_QT_GUI=OFF -DENABLE_OPENGL=OFF -DENABLE_HTTP_SERVER=OFF -DENABLE_TESTS=OFF -DENABLE_METAL=ON -DIOS_SIMULATOR_BUILD=OFF
