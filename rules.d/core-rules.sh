@@ -1913,7 +1913,14 @@ libretro_ymir_name="Ymir"
 libretro_ymir_git_url="https://github.com/warmenhoven/Ymir"
 libretro_ymir_post_fetch_cmd="git checkout libretro"
 
-
+include_core_trident() {
+	register_module core "trident"
+}
+libretro_trident_name="Trident 3DS"
+libretro_trident_build_rule="cmake"
+libretro_trident_git_url="https://github.com/DanAlexMorton/3dsTrident.git"
+libretro_trident_build_args="-DBUILD_LIBRETRO_CORE=ON -DUSE_LIBRETRO_AUDIO=ON -DENABLE_USER_BUILD=ON -DENABLE_VULKAN=OFF -DENABLE_LUAJIT=OFF -DENABLE_DISCORD_RPC=OFF -DENABLE_QT_GUI=OFF -DENABLE_OPENGL=ON -DENABLE_HTTP_SERVER=OFF -DENABLE_TESTS=OFF -DENABLE_METAL=OFF"
+libretro_trident_git_submodules="yes"
 
 # CORE RULE VARIABLES
 #
