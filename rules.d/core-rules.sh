@@ -286,6 +286,14 @@ libretro_fixgb_name="fixGB"
 libretro_fixgb_git_url="https://github.com/libretro/fixGB.git"
 libretro_fixgb_build_subdir="libretro"
 
+include_core_irogb() {
+	register_module core "irogb"
+}
+libretro_irogb_name="iroGB"
+libretro_irogb_git_url="https://github.com/AlexSutila/IroGB.git"
+libretro_dolphin_build_rule="cmake"
+libretro_dolphin_build_args="-DBUILD_LIBRETRO=ON -DNO_CORE_FILESYSTEM=ON"
+
 include_core_snes9x2002() {
 	register_module core "snes9x2002" -ngc -ps3 -psp1 -wii
 }
