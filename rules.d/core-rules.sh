@@ -1930,6 +1930,12 @@ libretro_trident_git_url="https://github.com/DanAlexMorton/3dsTrident.git"
 libretro_trident_build_args="-DBUILD_LIBRETRO_CORE=ON -DUSE_LIBRETRO_AUDIO=ON -DENABLE_USER_BUILD=ON -DENABLE_VULKAN=OFF -DENABLE_LUAJIT=OFF -DENABLE_DISCORD_RPC=OFF -DENABLE_QT_GUI=OFF -DENABLE_OPENGL=ON -DENABLE_HTTP_SERVER=OFF -DENABLE_TESTS=OFF -DENABLE_METAL=OFF"
 libretro_trident_git_submodules="yes"
 
+include_core_tia() {
+	register_module core "tia"
+}
+libretro_tia_name="Tia"
+libretro_tia_git_url="https://github.com/warmenhoven/tia"
+
 # CORE RULE VARIABLES
 #
 # All variables follow the format of libretro_<core>_<setting> where <core> is
