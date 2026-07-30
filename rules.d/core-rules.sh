@@ -1949,6 +1949,18 @@ libretro_radio_name="Radio"
 libretro_radio_git_url="https://github.com/fpscan/libretro-radio.git"
 libretro_radio_build_makefile="Makefile"
 
+include_core_cemu() {
+	register_module core "cemu" -ios -theos_ios -ngc -ps3 -psp1 -qnx -wii
+}
+libretro_cemu_name="Cemu"
+libretro_cemu_git_url="https://github.com/WizzardSK/cemu-libretro.git"
+libretro_cemu_git_submodules="yes"
+libretro_cemu_build_rule="cmake"
+libretro_cemu_build_opengl="yes"
+libretro_cemu_build_args="-DENABLE_LIBRETRO=ON -DENABLE_BLUEZ=OFF -DENABLE_FERAL_GAMEMODE=OFF"
+# CMake writes cemu_libretro.so to <source>/bin, not into the build directory.
+libretro_cemu_build_extradir="../bin/"
+
 # CORE RULE VARIABLES
 #
 # All variables follow the format of libretro_<core>_<setting> where <core> is
