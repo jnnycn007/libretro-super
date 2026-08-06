@@ -1,8 +1,8 @@
 # Software Information
-display_name = "Sony - PocketStation (PokketStation)"
+display_name = "Sony - PocketStation (pokketstation)"
 authors = "mentalfoundry"
 supported_extensions = "mcr|mcs|pss"
-corename = "PokketStation"
+corename = "pokketstation"
 categories = "Emulator"
 license = "GPLv3"
 permissions = ""
