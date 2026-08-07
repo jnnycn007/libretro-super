@@ -1,7 +1,7 @@
 # Software Information
 display_name = "Sega - MS/GG/MD/CD/32X (BlastEm)"
 authors = "Mike Pavone"
-supported_extensions = "md|gen|smd|68k|sgd|32x|sms|gg|sg|sg1|sc|sc3|sf7|col|cue|toc|iso|vgm|vgz|flac|wav|bin|rom|gz"
+supported_extensions = "md|gen|smd|68k|sgd|32x|sms|gg|sg|sg1|sc|sc3|sf7|col|cue|toc|iso|chd|vgm|vgz|flac|wav|bin|rom|gz"
 corename = "BlastEm"
 license = "GPLv3"
 permissions = ""
