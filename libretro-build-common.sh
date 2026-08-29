@@ -260,14 +260,19 @@ build_cmake() {
 
 		$core_build_configure
 
+		if [ -n "$DEBUG" ]; then
+			cmake_build_type="Debug"
+		else
+			cmake_build_type="Release"
+		fi
+
 		if [ -z "$NOCLEAN" ]; then
 			$core_build_preclean
 			echo_cmd "$make_cmdline --build build --target clean"
 		fi
-		make_cmdline1="$make_cmdline  $core_build_args . -Bbuild"
-		make_cmdline2="$make_cmdline --build build/ --target $core_cmake_target --config Release -- "
-  	[ -n "$JOBS" ] && make_cmdline2="$make_cmdline2 -j$JOBS"
-  	[ -n "$DEBUG" ] && make_cmdline2="$make_cmdline2 DEBUG=$DEBUG"
+		make_cmdline1="$make_cmdline $core_build_args -DCMAKE_BUILD_TYPE=$cmake_build_type . -Bbuild"
+		make_cmdline2="$make_cmdline --build build/ --target $core_cmake_target --config $cmake_build_type -- "
+		[ -n "$JOBS" ] && make_cmdline2="$make_cmdline2 -j$JOBS"
 
 		$core_build_prebuild
 		echo_cmd "$make_cmdline1"
